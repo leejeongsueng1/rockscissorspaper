@@ -1,3 +1,5 @@
+아래 메시지는 파이참에서 자동 생성한 readme.md입니다.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
