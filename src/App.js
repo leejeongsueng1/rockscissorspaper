@@ -41,11 +41,11 @@ function App() {
                 break;
             case 1:
                 console.log('select 1');
-                setNpcSelect(choice['scissors']);
+                setNpcSelect(choice['paper']);
                 break;
             case 2:
                 console.log('select 2');
-                setNpcSelect(choice['paper']);
+                setNpcSelect(choice['scissors']);
                 break;
             default:
 
@@ -61,8 +61,8 @@ function App() {
         </div>
         <div className="main">
             <button className="userButton" onClick={()=>play("rock")}><img className='icon' src="../images/rock_icon.png" alt="No Pics."/></button>
-            <button className="userButton" onClick={()=>play("scissors")}><img className='icon' src="../images/scissors_icon.png" alt="No Pics."/></button>
             <button className="userButton" onClick={()=>play("paper")}><img className='icon' src="../images/paper_icon.png" alt="No Pics."/></button>
+            <button className="userButton" onClick={()=>play("scissors")}><img className='icon' src="../images/scissors_icon.png" alt="No Pics."/></button>
         </div>
         </>
 
