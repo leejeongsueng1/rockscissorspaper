@@ -60,8 +60,8 @@ function App() {
             <Box title="NPC" img={npcSelect} winstate={winner.win}></Box>
         </div>
         <div className="main">
-            <button className="userButton" onClick={()=>play("scissors")}><img className='icon' src="../images/scissors_icon.png" alt="No Pics."/></button>
             <button className="userButton" onClick={()=>play("rock")}><img className='icon' src="../images/rock_icon.png" alt="No Pics."/></button>
+            <button className="userButton" onClick={()=>play("scissors")}><img className='icon' src="../images/scissors_icon.png" alt="No Pics."/></button>
             <button className="userButton" onClick={()=>play("paper")}><img className='icon' src="../images/paper_icon.png" alt="No Pics."/></button>
         </div>
         </>
