@@ -1,38 +1,38 @@
-.App {
-  text-align: center;
+/*--- Main Page Design ---*/
+.main {
+    display: flex;
+    justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*--- Box Component Design ---*/
+.box {
+    border: 1px solid black;
+    width: 500px;
+    text-align: center;
+    background-color: antiquewhite;
+    margin : 20px 3px;
+}
+.item-img {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.YOU {
+    color: green;
+    text-shadow: 2px 2px crimson;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.NPC {
+    color: crimson;
+    text-shadow: 2px 2px green;
 }
 
-.App-link {
-  color: #61dafb;
+/*--- Button Component Design ---*/
+.userButton {
+    margin: 5px 5px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.icon {
+    width: 100px;
 }
