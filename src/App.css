@@ -19,6 +19,11 @@
 
 }
 
+.nullBox {
+    width: 400px;
+    height: 400px;
+}
+
 .YOU {
     color: green;
     text-shadow: 2px 2px crimson;
