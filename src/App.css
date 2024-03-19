@@ -8,10 +8,39 @@
 .box {
     border: 1px solid black;
     width: 500px;
+    height: 600px;
     text-align: center;
     background-color: antiquewhite;
     margin : 20px 3px;
 }
+
+.box-draw {
+    border: 3px solid black;
+    width: 500px;
+    height: 600px;
+    text-align: center;
+    background-color: antiquewhite;
+    margin : 20px 3px;
+}
+
+.box-win {
+    border: 3px solid green;
+    width: 500px;
+    height: 600px;
+    text-align: center;
+    background-color: antiquewhite;
+    margin : 20px 3px;
+}
+
+.box-lose {
+    border: 3px solid red;
+    width: 500px;
+    height: 600px;
+    text-align: center;
+    background-color: antiquewhite;
+    margin : 20px 3px;
+}
+
 .item-img {
     width: 400px;
     height: 400px;
@@ -34,6 +63,18 @@
     text-shadow: 2px 2px green;
 }
 
+.state-WIN {
+    color: green;
+}
+
+.state-LOSE {
+    color: red;
+}
+
+.state-DRAW {
+    color: black;
+}
+
 /*--- Button Component Design ---*/
 .userButton {
     margin: 5px 5px;
@@ -41,3 +82,6 @@
 .icon {
     width: 100px;
 }
+
+
+

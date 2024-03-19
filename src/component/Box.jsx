@@ -8,7 +8,7 @@ export const Box = (props) => {
             <hr/>
             <img className='item-img' src={props && props.img} alt=""/>
             <hr/>
-            <h2 className="state">{props.winstate}</h2>
+            <h2 className={props.winstate}>{props.winstate}</h2>
         </div>
     )
     }else{
@@ -18,7 +18,7 @@ export const Box = (props) => {
             <hr/>
             <div className='nullBox'></div>
             <hr/>
-            <h2 className="state">{props.winstate}</h2>
+            <h2 className={props.winstate}>{props.winstate}</h2>
         </div>
     )
     }

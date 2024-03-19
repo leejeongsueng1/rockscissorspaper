@@ -27,42 +27,68 @@ function App() {
 
     const [userSelect, setUserSelect] = useState(null);
     const [npcSelect, setNpcSelect] = useState(null);
+    const [userstate, setUserstate] = useState(null);
+    const [npcstate, setNpcstate] = useState(null);
 
     function getRandomInt(min, max) {
       min = Math.ceil(min);
       max = Math.floor(max);
       return Math.floor(Math.random() * (max - min)) + min; //최댓값은 제외, 최솟값은 포함
     }
+
+    const judge = (user,npc) => {
+         if(user === npc) {
+             return 'draw';
+         }else{
+             if(user ==='rock') return npc ==='scissors' ? true : false;
+             else if(user==='scissors') return npc === 'paper' ? true : false;
+             else return npc === 'rock' ? true : false;
+         }
+
+    }
+
     const play = (userChoice) =>{
+        let npcChoice = null;
         switch (getRandomInt(0, 3)){
             case 0:
-                console.log('select 0');
                 setNpcSelect(choice['rock']);
+                npcChoice = 'rock';
                 break;
             case 1:
-                console.log('select 1');
                 setNpcSelect(choice['paper']);
+                npcChoice = 'paper';
                 break;
             case 2:
-                console.log('select 2');
                 setNpcSelect(choice['scissors']);
+                npcChoice = 'scissors';
                 break;
             default:
 
         }
         setUserSelect(choice[userChoice]);
+        if(judge(userChoice, npcChoice) === 'draw'){
+            setUserstate(winner['draw']);
+            setNpcstate(winner['draw']);
+        }
+        else if (judge(userChoice, npcChoice)){
+            setUserstate(winner['win']);
+            setNpcstate(winner['lose']);
+        }else{
+            setUserstate(winner['lose']);
+            setNpcstate(winner['win']);
+        }
     }
 
     return (
         <>
         <div className="main">
-            <Box title="YOU" img={userSelect} winstate={winner.win}></Box>
-            <Box title="NPC" img={npcSelect} winstate={winner.win}></Box>
+            <Box title="YOU" img={userSelect} winstate={userstate}></Box>
+            <Box title="NPC" img={npcSelect} winstate={npcstate}></Box>
         </div>
         <div className="main">
             <button className="userButton" onClick={()=>play("rock")}><img className='icon' src="../images/rock_icon.png" alt="No Pics."/></button>
-            <button className="userButton" onClick={()=>play("paper")}><img className='icon' src="../images/paper_icon.png" alt="No Pics."/></button>
             <button className="userButton" onClick={()=>play("scissors")}><img className='icon' src="../images/scissors_icon.png" alt="No Pics."/></button>
+            <button className="userButton" onClick={()=>play("paper")}><img className='icon' src="../images/paper_icon.png" alt="No Pics."/></button>
         </div>
         </>
 
