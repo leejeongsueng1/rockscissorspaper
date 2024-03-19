@@ -2,7 +2,6 @@ import './App.css';
 import {Box} from "./component/Box";
 import {useState} from "react";
 
-
 const choice = {
     rock: '../images/rock.jpg',
     scissors: '../images/scissors.jpg',
